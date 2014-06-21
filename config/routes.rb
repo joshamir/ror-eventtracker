@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :events
+
+
+  resources :events do
+    resources :participants do
+      member do
+        post :add_guest
+      end
+    end
+  end
 
   root :to => 'events#index'
   # The priority is based upon order of creation: first created -> highest priority.
