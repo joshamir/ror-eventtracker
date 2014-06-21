@@ -22,7 +22,7 @@
           </td>
           <td><%= event.total_participants %></td>
           <td>
-            <%= link_to "Edit", edit_event_path(event), :class => "brn btn-small btn-warning" %>
+            <%= link_to "Edit" , edit_event_path(event), :class => "brn btn-small btn-warning" %>
             <%= link_to 'Destroy', event,  :class => "brn btn-small btn-danger",  method: :delete, data: { confirm: 'Are you sure?'} %>
           </td>
         </tr>

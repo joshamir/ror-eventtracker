@@ -8,7 +8,7 @@
 <ul>
   <% @event.participants.each do |single_participant| %>
     <li><strong><%= single_participant.popularity_label + " " %></strong><%= single_participant.name %> is bringing <%= single_participant.guests %> guests<br />
-      Bringing a guest? <%= button_to "Guest +1", add_guest_event_participant_path(@event.id, single_participant.id) %>
+      Bringing a guest? <%= button_to "Guest +1", add_guest_event_participant_path(@event.id, single_participant.id), :class => "brn btn-info " %>
     </li>
   <% end %>
 </ul>
