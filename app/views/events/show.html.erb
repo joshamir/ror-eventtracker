@@ -4,6 +4,7 @@
 </div>
 <h3><%= @event.description %></h3>
 <p><%= @event.location %></p>
+<p><%= @event.date %></p>
 <h3>Participants</h3>
 <ul>
   <% @event.participants.each do |single_participant| %>
@@ -19,6 +20,12 @@
   <%= form.text_field :name %>
   <%= form.submit %>
 <% end %>
+
+<h2>Add Date to Event</h2>
+<%= form_for @event do |form| %>
+	<%= form.text_field :date %>
+  	<%= form.submit %>
+  <% end %>
 
 
 
