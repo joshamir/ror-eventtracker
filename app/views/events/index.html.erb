@@ -10,6 +10,7 @@
 <table class="table table-striped">
   <thead>
     <th>Event</th>
+    <th>Date</th>
     <th>Total Participants</th>
     <th>Actions</th>
   </thead>
@@ -20,6 +21,8 @@
             <%= link_to event.name, event_path(event) %> - <%= event.description %><br />
             <%= event.location %>
           </td>
+          
+          <td><%= event.date.to_formatted_s(:long) %></td>
           <td><%= event.total_participants %></td>
           <td>
             <%= link_to "Edit" , edit_event_path(event), :class => "brn btn-small btn-warning" %>
